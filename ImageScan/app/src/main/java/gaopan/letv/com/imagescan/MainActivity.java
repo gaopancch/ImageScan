@@ -35,7 +35,7 @@ import java.util.List;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
-    private HashMap<String, List<String>> mGruopMap = new HashMap<String, List<String>>();
+    private HashMap<String, List<String>> mGruopMap = new HashMap<String, List<String>>();//图片的父路径即其所在文件夹，图片的路径列表
     private List<ImageBean> list = new ArrayList<ImageBean>();
     private final static int SCAN_OK = 1;
     private ProgressDialog mProgressDialog;

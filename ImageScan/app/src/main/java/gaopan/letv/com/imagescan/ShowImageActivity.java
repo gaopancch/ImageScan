@@ -3,6 +3,9 @@ package gaopan.letv.com.imagescan;
 import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.Toast;
 
@@ -23,6 +26,12 @@ public class ShowImageActivity extends Activity {
 
         adapter = new ChildAdapter(this, list, mGridView);
         mGridView.setAdapter(adapter);
+        mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.i("gaopan","path="+list.get(position));
+            }
+        });
 
     }
 
